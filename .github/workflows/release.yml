@@ -27,7 +27,7 @@ jobs:
         run: mvn -B clean package -DskipTests
 
       - name: Upload release to GitHub
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: target/*.jar
           generate_release_notes: true
