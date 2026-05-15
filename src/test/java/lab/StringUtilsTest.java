@@ -59,6 +59,18 @@ class StringUtilsTest {
         assertFalse(StringUtils.isBlank("hello"));
     }
 
+    @Test
+    @DisplayName("Олон үгтэй string урвуулагдана")
+    void reverse_multiWord() {
+        assertEquals("dlrow olleh", StringUtils.reverse("hello world"));
+    }
+
+    @Test
+    @DisplayName("Palindrome урвуулбал өөрөө буцаана")
+    void reverse_palindrome() {
+        assertEquals("racecar", StringUtils.reverse("racecar"));
+    }
+
     // ── capitalize ───────────────────────────────────────────────────────────
 
     @Test
